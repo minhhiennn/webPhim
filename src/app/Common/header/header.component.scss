@@ -1,14 +1,18 @@
 .submenu {
+    display: none;
+    left: 10px;
+    top: 38px;
     padding: 0;
     list-style: none;
     position: absolute;
-    border: 1px solid red;
     width: 350px;
     background: #121212;
     z-index: 100;
-    li {
-        border: 1px solid red;
-        padding: 0;
+    > li {
+        float: left;
+        width: 50%;
+        // top right bottom left
+        padding: 5px 5px 5px 5px;
         margin: 0;
     }
 }
@@ -36,6 +40,7 @@
             .li-main-menu {
                 // top right bottom left
                 padding: 5px 2px 5px 20px;
+                position: relative;
                 a {
                     text-transform: uppercase;
                     color: white;
@@ -44,6 +49,9 @@
             .li-main-menu:hover {
                 > a {
                     color: orange;
+                }
+                > .submenu {
+                    display: block;
                 }
             }
         }
