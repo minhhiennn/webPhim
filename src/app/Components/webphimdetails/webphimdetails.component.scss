@@ -1,0 +1,23 @@
+.header {
+    border: 1px solid red;
+    .container {
+        border: 1px solid red;
+        .logo {
+            border: 1px solid red;
+            margin: 0;
+            float: left;
+            width: 13%;
+            max-width: 200px;
+            img {
+                height: 60px;
+                // top right bottom left
+                padding: 12px 6px 12px 4px;
+            }
+        }
+        #main-menu {
+            border: 1px solid red;
+            list-style: none;
+            display: flex;
+        }
+    }
+}
