@@ -1,9 +1,9 @@
 .header {
     border: 1px solid red;
+    background: #121212;
     .container {
         border: 1px solid red;
         .logo {
-            border: 1px solid red;
             margin: 0;
             float: left;
             width: 13%;
@@ -17,7 +17,16 @@
         #main-menu {
             border: 1px solid red;
             list-style: none;
+            margin-top: 10px;
             display: flex;
+            li {
+                // top right bottom left
+                padding: 5px 2px 5px 20px;
+                a {
+                    text-transform: uppercase;
+                    color: white;
+                }
+            }
         }
     }
 }
