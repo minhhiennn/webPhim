@@ -3,10 +3,14 @@ a:hover,
 a:visited,
 a:link,
 a:active {
-    text-decoration: none !important
+    text-decoration: none !important;
 }
-ul,
-li {
-    margin: 0;
-    padding: 0;
+
+// remove css input
+textarea:focus,
+input:focus {
+    outline: none;
+}
+input {
+    border: none;
 }
