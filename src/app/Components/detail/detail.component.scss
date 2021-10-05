@@ -1,0 +1,112 @@
+.main-content {
+    border: 1px solid red;
+
+    .content {
+        .container {
+            border: 1px solid red;
+            .film-info {
+                .image {
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 50%;
+                    position: relative;
+                    background: url(https://i3.wp.com/img.phimchill.net/images/info/the-ash-lad-in-the-hall-of-the-mountain-kingaskeladden-i-dovregubbens-hall.jpg)
+                        no-repeat center;
+                    background-size: cover;
+                    > img {
+                        width: 250px;
+                        height: 150px;
+                        object-fit: cover;
+                        border: 1px solid #fff;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 10px;
+                    }
+                    .icon-play {
+                        background: rgba(255, 150, 1, 0.75);
+                        height: 50px;
+                        width: 50px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin: -25px 0 0 -25px;
+                        border-radius: 50%;
+                        transform: scale(1.5);
+                        transition: all 0.3s ease-in-out;
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                    .icon-play::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        border: 15px solid transparent;
+                        border-left: 20px solid #fff;
+                        margin: -15px 0 0 -6px;
+                    }
+                    .text {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 280px;
+                        > h1 {
+                            margin: 0 0 8px;
+                            color: #fff;
+                            text-shadow: 0 2px 1px #333;
+                        }
+                        > h2 {
+                            font-size: 16px;
+                            margin: 0 0 10px;
+                            font-weight: 700;
+                            text-shadow: 0 2px 1px #333;
+                            color: #fff;
+                        }
+                        > ul {
+                            margin: 0;
+                            padding: 0;
+                            li {
+                                display: inline-block;
+                                box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+                                margin-right: 5px;
+                                a {
+                                    font-weight: 700;
+                                    border-radius: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                > .text {
+                    margin-top: 10px;
+                    padding: 10px;
+                    border: 1px solid red;
+                    height: 500px;
+                    background-color: #252525;
+                    .breadcrumb {
+                        > li {
+                            > a {
+                                font-size: 15px;
+                                font-weight: 400;
+                                color: white;
+                                margin: 0;
+                                > span {
+                                    color: #ff9601;
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                    .social {
+                        .box-rating {
+                            #star {
+                                cursor: pointer;
+                                float: left;
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

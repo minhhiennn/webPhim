@@ -1,8 +1,7 @@
 .submenu {
-    
     display: none;
     left: 10px;
-    top: 38px;
+    top: 35px;
     padding: 0;
     list-style: none;
     position: absolute;
@@ -15,14 +14,22 @@
         // top right bottom left
         padding: 5px 5px 5px 5px;
         margin: 0;
+        > a {
+            color: white;
+        }
+    }
+    > li:hover {
+        > a {
+            color: orange;
+        }
     }
 }
 .header {
-    border: 1px solid red;
     background: #121212;
-    display: flex;
+    padding: 5px;
     .container {
-        border: 1px solid red;
+        border:1px solid red;
+        display: flex;
         .logo {
             margin: 0;
             float: left;
@@ -38,11 +45,12 @@
             list-style: none;
             margin-top: 10px;
             display: flex;
+
             .li-main-menu {
                 // top right bottom left
                 padding: 5px 2px 5px 20px;
                 position: relative;
-                a {
+                > a {
                     text-transform: uppercase;
                     color: white;
                 }
@@ -57,11 +65,14 @@
             }
         }
         .form-search {
+            margin-left: auto;
+            margin-top: 10px;
             border: 1px solid white;
             float: right;
             position: relative;
             color: white;
             padding: 5px;
+            max-height: 35px;
             ::placeholder {
                 color: white;
             }
@@ -73,6 +84,15 @@
                 position: absolute;
                 right: 10px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1380px) {
+    .header{
+        display: flex;
+        .container{
+            display: block;
         }
     }
 }
