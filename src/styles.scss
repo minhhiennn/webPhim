@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+    background: #1a1a1a;
+    margin: 0;
+    font-family: Arial, Tahoma;
+    font-size: 14px;
+    color: #dcdcdc;
+    @media only screen and (max-width: 1183px) {
+        background-color: lightblue;
+    }
+}
+
 a,
 a:hover,
 a:visited,
@@ -15,14 +27,4 @@ input:focus {
 input {
     border: none;
 }
-body,
-html {
-    background: #1a1a1a;
-    margin: 0;
-    font-family: Arial, Tahoma;
-    font-size: 14px;
-    color: #dcdcdc;
-    @media only screen and (max-width: 1183px) {
-        background-color: lightblue;
-    }
-}
+
