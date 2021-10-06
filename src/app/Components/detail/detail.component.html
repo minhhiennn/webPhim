@@ -89,14 +89,280 @@
                         </div>
                         <div class="box-rating">
                             <div id="star">
-                                <img src="https://phimchill.net/media/img/star-on.png" alt="1" title="Dở tệ" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="2" title="Dở" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="3" title="Không hay" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="4" title="Không hay lắm" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="5" title="Bình thường" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="6" title="Xem được" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="7" title="Có vẻ hay" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="8" title="Hay" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="9" title="Rất hay" />&nbsp;<img src="https://phimchill.net/media/img/star-on.png" alt="10" title="Tuyệt hay" />
+                                <span *ngFor="let item of listStar;let i = index" (mouseover)="moveOnStar($event)"
+                                    (mouseout)="moveOutStar($event)">
+                                    <img [src]="item.src" [alt]="item.alt" [title]="item.title" />&nbsp;</span>
+                            </div>
+                            <div id="div_average" style="color: white;">
+                                (<span class="average" id="average">8</span>
+                                đ/
+                                <span id="rate_count">50</span>
+                                lượt)
+                                <span id="hint" style="font-size: 12px">
+                                    {{evaluate}}
+                                </span>
                             </div>
                         </div>
-                        
                     </div>
+                    <ul class="entry-meta">
+                        <li>
+                            <label>Đang phát:</label>
+                            <span style="color: red;"> HD Vietsub</span>
+                        </li>
+                        <li>
+                            <label>Năm phát hành:</label>
+                            <a href="#"> 2021</a>
+                        </li>
+                        <li>
+                            <label>Quốc Gia:</label>
+                            <a href="#"> Phim Âu Mỹ</a>
+                        </li>
+                        <li>
+                            <label>Thể loại:</label>
+                            <a href="#"> Phim Hành Động</a>
+                        </li>
+                        <li>
+                            <label>Đạo diễn:</label>
+                            <a href="#"> Brian Mendoza</a>
+                        </li>
+                        <li>
+                            <label>Điểm IMDb:</label>
+                            <span class="imdb"> 6,1</span>
+                        </li>
+                        <li>
+                            <label>Diễn viên:</label>
+                            <a> Isabela Moner </a>, <a>Jason Momoa</a>, <a>Adria Arjona</a>, <a>Lex Scott Davis</a>
+                        </li>
+                        <li>
+                            <label>Thời lượng:</label>
+                            <span> 96 phút</span>
+                        </li>
+                    </ul>
+                    <div class="film-content-wrapper">
+                        <p class="heading">Nội dung phim</p>
+                        <div class="film-content" style="max-height: 500px">
+                            <a href="#">Cô Gái Ngọt Ngào</a> Ở Pittsburg, Pennsylvania, Amanda Cooper đổ bệnh vì ung
+                            thư. Chồng
+                            cô, Ray,
+                            phát hiện ra một loại thuốc có khả năng cứu sống Amanda đã bị rút khỏi thị trường, do động
+                            thái kinh doanh mới của Giám đốc điều hành BioPrime Simon Keeley. Theo dõi Keeley đang tranh
+                            luận trực tiếp với Dân biểu Diana Morgan, Ray gọi đến và đe dọa Keeley, nói rằng nếu anh ta
+                            không làm ngược lại, anh ta sẽ giết anh ta. Keeley không coi trọng mối đe dọa và Amanda đã
+                            vượt qua ngay sau đó, tàn phá Ray và con gái của họ, Rachel. Sáu tháng sau, Ray nhận được
+                            cuộc gọi từ một phóng viên, Martin Bennett, người nói với anh ta rằng anh ta có thể giúp anh
+                            ta đòi lại công bằng cho Amanda. Họ gặp nhau trên một chuyến tàu điện ngầm, vô tình bị
+                            Rachel và một sát thủ tên là Santos đi theo. Bennett giải thích rằng BioPrime đã hối lộ bất
+                            kỳ ai đặt câu hỏi về hành động bẩn thỉu của họ, bao gồm cả công ty sản xuất loại thuốc mà
+                            Amanda cần để cứu sống cô. Santos giết Bennett và tấn công Ray và Rachel. Khi tàu dừng ở một
+                            ga, Santos đâm Ray và đánh gục Rachel, khiến cả hai nằm trên sân ga và lên tàu.
+                            <br>
+                            <br>
+                            Hai năm sau, Ray đã tự mình điều tra Keeley. Anh ta lẻn vào một buổi dạ tiệc tôn vinh Keeley
+                            và thẩm vấn anh ta về vụ tấn công Bennett và các khoản hối lộ. Khi Keeley nói với anh ta
+                            rằng chính Chủ tịch Vinod Shah đã ra hiệu cho tất cả các đòn đánh, một trong những vệ sĩ của
+                            Keeley tấn công Ray và Ray vô tình giết chết anh ta và Keeley. Ray đưa Rachel và họ trốn
+                            trong một nhà nghỉ bên ngoài thị trấn. Rachel, lo lắng về nhiệm vụ trả thù của Ray đã liên
+                            hệ với Đặc vụ FBI Sarah Meeker và cố gắng thuyết phục cô ấy xem xét BioPrime. Sáng hôm sau,
+                            hai tên lính đánh thuê đột nhập vào nhà nghỉ và Ray giết cả hai, khiến mối quan hệ giữa anh
+                            và Rachel càng thêm căng thẳng. Ray dự định đi theo Shah và Rachel thuyết phục anh ta đưa cô
+                            đi cùng. Họ bẫy xe của Shah và Ray cố gắng thẩm vấn anh ta, nhưng anh ta bị giết bởi Santos,
+                            người đang theo dõi Shah. Cả ba gặp nhau tại một quán ăn và Ray được Santos cho biết tên
+                            người chủ của anh ta, Diana Morgan, với lời hứa họ sẽ gặp lại nhau ở Pittsburg. Tuy nhiên,
+                            khi đến nơi, FBI phát hiện họ đang đuổi theo Ray đến sân thượng của một sân vận động bóng
+                            chày. Khi Meeker cố gắng nói chuyện với anh ta, Ray được tiết lộ thực sự là Rachel, Ray đã
+                            chết vì vết thương của mình hai năm trước tại nhà ga. Cô ấy nhảy xuống sông, và vẫn bị bắt
+                            bởi Meeker, nhưng cô ấy đã đâm xe cứu thương và trốn thoát. Ray đã chết vì vết thương của
+                            mình hai năm trước tại nhà ga. Cô ấy nhảy xuống sông, và vẫn bị bắt bởi Meeker, nhưng cô ấy
+                            đã đâm xe cứu thương và trốn thoát. Ray đã chết vì vết thương của mình hai năm trước tại nhà
+                            ga. Cô ấy nhảy xuống sông, và vẫn bị bắt bởi Meeker, nhưng cô ấy đã đâm xe cứu thương và
+                            trốn thoát.
+                            <br>
+                            <br>
+                            Quyết tâm đòi lại công bằng cho gia đình mình, Rachel đột nhập vào văn phòng của Morgan và
+                            đối mặt với Santos một lần nữa, cuối cùng giết chết anh ta. Cô đối mặt với Morgan và ghi lại
+                            cảnh cô thừa nhận mình đã bị BioPrime mua chuộc và ra lệnh tấn công Bennett. Rachel gửi đoạn
+                            băng cho Meeker
+                            <hr>
+                        </div>
+                    </div>
+                    <div id="tags">
+                        <p class="heading">Tags</p>
+                        <div class="tags-list">
+                            <li class="tag">
+                                <h3>
+                                    <a href="#" title="cô gái ngọt ngào">cô gái ngọt ngào</a>
+                                </h3>
+                            </li>
+                            <li class="tag">
+                                <h3>
+                                    <a href="#" title="sweet girl">sweet girl</a>
+                                </h3>
+                            </li>
+                        </div>
+                        <div class="tukhoa">
+                            <h4>
+                                Cô Gái Ngọt Ngào phimoi.net, Cô Gái Ngọt Ngào full hd vietsub, xem phim Cô Gái Ngọt
+                                Ngào,phim Sweet Girl vietsub,Cô Gái Ngọt Ngào bilutv,bilutvzz,Cô Gái Ngọt Ngào
+                                phimmoi,phimmoizz,zphimmoi,phimmoii,phimmoiizz,Cô Gái Ngọt Ngào motphim,Cô Gái Ngọt Ngào
+                                phimbathu,Cô Gái Ngọt Ngào khoaitv, bongngo,Sweet Girl xemphimplus,zingtv, hdonline,
+                                phim3s, xemphimgi, banhtv, Cô Gái Ngọt Ngào dongphim,dongphym,vtv16, vuviphim,
+                                vietsubtv, vtvgiaitri,Cô Gái Ngọt Ngào youtube,phimnhanh,tvhay,khophimle,viethd,vphim,Cô
+                                Gái Ngọt Ngào netflix,trangphim,Cô Gái Ngọt Ngào
+                                fullphim,ssphim,phimgi,phephimz,phim99,vuviphimtv,Cô Gái Ngọt Ngào motchill,Cô Gái Ngọt
+                                Ngào phimmoiplus,Cô Gái Ngọt Ngào cam,Cô Gái Ngọt Ngào thuyết minh,Cô Gái Ngọt Ngào phụ
+                                đề,Cô Gái Ngọt Ngào lồng tiếng,tải phim Cô Gái Ngọt Ngào
+                            </h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop"
+                        data-href="https://phimchill.net/info/co-gai-ngot-ngao-pm8966" data-colorscheme="dark"
+                        data-width="980" data-order-by="reverse_time" fb-xfbml-state="rendered"
+                        fb-iframe-plugin-query="app_id=1057881674616601&amp;color_scheme=dark&amp;container_width=970&amp;height=100&amp;href=https%3A%2F%2Fphimchill.net%2Finfo%2Fco-gai-ngot-ngao-pm8966&amp;locale=vi_VN&amp;order_by=reverse_time&amp;sdk=joey&amp;version=v7.0&amp;width=980">
+                        <span style="vertical-align: bottom; width: 980px; height: 433px;"><iframe name="f2beab880e201"
+                                width="980px" height="100px" data-testid="fb:comments Facebook Social Plugin"
+                                title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true"
+                                allowfullscreen="true" scrolling="no" allow="encrypted-media"
+                                src="https://www.facebook.com/v7.0/plugins/comments.php?app_id=1057881674616601&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df13ea4271b3275c%26domain%3Dphimchill.net%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fphimchill.net%252Ff3fbd2f68c66874%26relation%3Dparent.parent&amp;color_scheme=dark&amp;container_width=970&amp;height=100&amp;href=https%3A%2F%2Fphimchill.net%2Finfo%2Fco-gai-ngot-ngao-pm8966&amp;locale=vi_VN&amp;order_by=reverse_time&amp;sdk=joey&amp;version=v7.0&amp;width=980"
+                                style="border: none; visibility: visible; width: 980px; height: 433px;"
+                                class=""></iframe></span>
+                    </div>
+                </div>
+                <hr style="color: white;">
+                <div class="film-related">
+                    <div class="heading">
+                        <p class="caption">Có thể bạn muốn xem</p>
+                    </div>
+                    <owl-carousel-o [options]="customOptions">
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <span>2015</span>
+                                <a title="12 Chú Vịt Vàng - 12 Gloden Ducks" href="#">
+                                    <img src="https://img.phimchill.net/images/film/12-chu-vit-vang-201605540.jpg"
+                                        alt="12 Chú Vịt Vàng - 12 Golden Ducks " />
+                                    <p>12 Chú Vịt Vàng - 12 Golden Ducks</p>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <span>2016</span>
+                                <a title="12 Con Giáp - Chinese Zodiac" href="#">
+                                    <img src="https://img.phimchill.net/images/film/12-con-giap-201605256.jpg"
+                                        alt="12 Chú Vịt Vàng - 12 Golden Ducks " />
+                                    <p>12 Con Giáp - Chinese Zodiac</p>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <span>2017</span>
+                                <a title="12 Con Khỉ Phần 2 - 12 Monkeys 2" href="#">
+                                    <img src="https://img.phimchill.net/images/film/12-con-khi-phan-2-201608114.jpg"
+                                        alt="12 Chú Vịt Vàng - 12 Golden Ducks " />
+                                    <p>12 Con Khỉ Phần 2 - 12 Monkeys 2</p>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <span>2018</span>
+                                <a title="Ký Ức Thức Tỉnh - Vice" href="#">
+                                    <img src="https://img.phimchill.net/images/film/ky-uc-thuc-tinh-vice-201602637.jpg"
+                                        alt="12 Chú Vịt Vàng - 12 Golden Ducks " />
+                                    <p>Ký Ức Thức Tỉnh - Vice</p>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <span>2019</span>
+                                <a title="Cuộc Chiến Ngai Vàng 2 - Game of Thrones" href="#">
+                                    <img src="https://img.phimchill.net/images/film/phim-cuoc-chien-ngai-vang-2-201611315.jpg"
+                                        alt="12 Chú Vịt Vàng - 12 Golden Ducks " />
+                                    <p>Cuộc Chiến Ngai Vàng 2 - Game of Thrones</p>
+                                </a>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="item">
+                                <span>2020</span>
+                                <a title="Thấy (Phần 2) - See (Season 2)" href="#">
+                                    <img src="https://img.phimchill.net/images/info/see-season-2.jpg"
+                                        alt="12 Chú Vịt Vàng - 12 Golden Ducks " />
+                                    <p>Thấy (Phần 2) - See (Season 2)</p>
+                                </a>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="container-tag-box" id="tag-box">
+    <p><a class="btn btn-dark btn-xs btn-rounded" title="quái vật" href="../tag/quái-vật/">quái vật</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="xã hội đen" href="../tag/xã-hội-đen/">xã hội đen</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="khủng bố" href="../tag/khủng-bố/">khủng bố</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="phù thủy" href="../tag/phù-thủy/">phù thủy</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="châu tinh trì" href="../tag/châu-tinh-trì/">châu tinh trì</a>
+        <a class="btn btn-dark btn-xs btn-rounded" title="jackie chan" href="../tag/jackie-chan/">jackie chan</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="thành long" href="../tag/thành-long/">thành long</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="ma cà rồng" href="../tag/ma-cà-rồng/">ma cà rồng</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="robot" href="../tag/robot/">robot</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="người máy" href="../tag/người-máy/">người máy</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="donnie yen" href="../tag/donnie-yen/">donnie yen</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="chân tử đan" href="../tag/chân-tử-đan/">chân tử đan</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="chung tử đơn" href="../tag/chung-tử-đơn/">chung tử đơn</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="jason statham" href="../tag/jason-statham/">jason statham</a>
+        <a class="btn btn-dark btn-xs btn-rounded" title="lý liên kiệt" href="../tag/lý-liên-kiệt/">lý liên kiệt</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="marvel" href="../tag/marvel/">marvel</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="zombie" href="../tag/zombie/">zombie</a><a
+            class="btn btn-dark btn-xs btn-rounded" title="người sói" href="../tag/người-sói/">người sói</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="lưu đức hoa" href="../tag/lưu-đức-hoa/">lưu đức hoa</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="kungfu" href="../tag/kungfu/">kungfu</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="tận thế" href="../tag/tận-thế/">tận thế</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="hồng kim bảo" href="../tag/hồng-kim-bảo/">hồng kim bảo</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="paul walker" href="../tag/paul-walker/">paul walker</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="phạm băng băng" href="../tag/phạm-băng-băng/">phạm băng
+            băng</a> <a class="btn btn-dark btn-xs btn-rounded" title="phim 18+" href="../genre/phim-18">phim 18+</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="batman" href="../tag/batman/">batman</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="người dơi" href="../tag/người-dơi/">người dơi</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="tom cruise" href="../tag/tom-cruise/">tom cruise</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="iron man" href="../tag/iron-man/">iron man</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="người sắt" href="../tag/người-sắt/">người sắt</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="super man" href="../tag/super-man/">super man</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="siêu nhân" href="../tag/siêu-nhân/">siêu nhân</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="harry potter" href="../tag/harry-potter/">harry potter</a> <a
+            class="btn btn-dark btn-xs btn-rounded" title="lý tiểu long" href="../tag/lý-tiểu-long/">lý tiểu long</a> <a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/bilutv">bilutv</a> <a
+            class="btn btn-dark btn-xs btn-rounded" href="../">phimmoi</a> <a class="btn btn-dark btn-xs btn-rounded"
+            href="../">phimmoizz</a> <a class="btn btn-dark btn-xs btn-rounded" href="../tag/motphim">motphim</a> <a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/bongngo">bongngo&nbsp;</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/phimbathu">phimbathu</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/xemphimplus">xemphimplus</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/hdonline">hdonline</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/banhtv">banhtv</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/phim3s">phim3s</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/hdo">hdo</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/vtv16">vtv16</a><a class="btn btn-dark btn-xs btn-rounded" href="../tag/marvel">marvel</a><a
+            class="btn btn-dark btn-xs btn-rounded" href="../tag/dc">dc</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/phimvip">phimvip</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/dongphim">dongphim</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/netflix">netflix</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/zingtv">zingtv</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/zphimmoi">zphimmoi</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/phimmoii">phimmoii</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/phimmoi123">phimmoi123</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/mphimmoi">mphimmoi</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/subnhanh">subnhanh</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/fullphim">fullphim</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/dongphym">dongphym</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/motchill">motchill</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/ssphim">ssphim</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/iphimmoi">iphimmoi</a><a class="btn btn-dark btn-xs btn-rounded"
+            href="../tag/bichill">bichill</a></p>
 </div>
 <app-footer></app-footer>

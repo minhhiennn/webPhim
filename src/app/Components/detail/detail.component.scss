@@ -1,9 +1,18 @@
+.imdb {
+    color: #000;
+    padding: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #e3b71e;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
 .main-content {
-    border: 1px solid red;
-
+    background-color: #252525;
     .content {
         .container {
-            border: 1px solid red;
+            background-color: #252525;
             .film-info {
                 .image {
                     width: 100%;
@@ -79,8 +88,6 @@
                 > .text {
                     margin-top: 10px;
                     padding: 10px;
-                    border: 1px solid red;
-                    height: 500px;
                     background-color: #252525;
                     .breadcrumb {
                         > li {
@@ -105,8 +112,162 @@
                             }
                         }
                     }
+                    .entry-meta {
+                        border: 1px solid red;
+                        margin-top: 10px;
+                        list-style: none;
+                        padding: 0;
+                        overflow: hidden;
+                        padding-bottom: 10px;
+                        padding-left: 5px;
+                        > li {
+                            width: 30%;
+                            float: left;
+                            color: #828282;
+                            > label {
+                                color: white;
+                            }
+                            > span {
+                                color: #828282;
+                            }
+                            > a {
+                                color: #828282;
+                            }
+                            > a:hover {
+                                color: orange;
+                            }
+                        }
+                    }
+                    .film-content-wrapper {
+                        color: #828282;
+                        > .heading {
+                            font-weight: 700;
+                            margin-bottom: 15px;
+                            font-size: 1.1em;
+                            color: #ff9601;
+                        }
+                    }
+                    #tags {
+                        color: #828282;
+                        > .heading {
+                            font-weight: 700;
+                            margin-bottom: 15px;
+                            font-size: 1.1em;
+                            color: #ff9601;
+                        }
+                        .tags-list {
+                            display: flex;
+                            .tag {
+                                list-style: none;
+                                margin: 0 0.8em 0.8em 0;
+                                box-shadow: 0 3px 0 rgb(0 0 0 / 20%);
+                                background: #353535;
+                                > h3 {
+                                    margin: 0;
+                                    font-weight: 400;
+                                    > a {
+                                        display: block;
+                                        padding: 0.4em 0.6em;
+                                        line-height: inherit;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                        color: #778187;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .tukhoa {
+                            > h4 {
+                                color: white;
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+                .comment {
+                    background: #fff;
+                    padding: 5px;
+                    margin: 20px 0 0;
+                    border-radius: 3px;
+                }
+                .film-related {
+                    margin: 20px 0 0;
+                    padding: 10px 0 0;
+                    > .heading {
+                        .caption {
+                            font-size: 25px;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            margin-bottom: 15px;
+                            padding: 16px 0;
+                            color: #ff8a00;
+                        }
+                    }
+                    .item {
+                        position: relative;
+                        // top right bottom left
+                        > span {
+                            position: absolute;
+                            top: 0px;
+                            left: 8px;
+                            padding: 5px;
+                            background: #ff9601;
+                            border-radius: 0 3px 3px 0;
+                        }
+                        > a {
+                            display: block;
+                            margin: 0 8px;
+                            overflow: hidden;
+                            color: white;
+                            > img {
+                                width: 100%;
+                                // width: 100%;
+                                height: 100px;
+                                object-fit: cover;
+                            }
+                            > p {
+                                background-color: rgba(0, 0, 0, 0.7);
+                                width: 92.5%;
+                                //width: 85%;
+                                max-height: 35px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                position: absolute;
+                                bottom: 0;
+                                margin: 0;
+                                // top right bottom left
+                                padding: 5px 0px 5px 2px;
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
+}
+.container-tag-box {
+    margin: 0 auto;
+    width: auto;
+    padding: 0 60px;
+    max-width: 1500px;
+    > p {
+        margin: 0;
+        padding: 0;
+        .btn-dark{
+            border-color: #1a1a1a;
+            background-color: #1a1a1a;
+        }
+        > a {
+            padding: .250rem .75rem;
+            margin: 0;
+            color: #fff;
+            line-height: 18px;
+            font-size: 12px;
+        }
+        > a:hover{
+            color: orange;
         }
     }
 }
