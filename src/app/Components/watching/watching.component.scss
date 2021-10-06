@@ -230,105 +230,84 @@
             transition: 0.7s;
         }
     }
-    .list-film#list-film-realted .item .label-quality,
-    .list-film#list-film-realted .item .label {
-        left: 8px;
-        top: 0;
-    }
+    .film-related {
+        margin: 20px 0 0;
+        padding: 10px 0 0;
+        > .heading {
+            .caption {
+                font-size: 25px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+                padding: 16px 0;
+                color: #ff8a00;
+            }
+        }
+        > owl-carousel-o > div {
+            background-color: red;
+        }
+        .item {
+            position: relative;
 
-    #list-film-realted .item a p {
-        position: absolute;
-        color: #fff;
-    }
-    .item .icon-play {
-        background: #ff9601;
-        height: 50px;
-        width: 50px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -25px 0 0 -25px;
-        border-radius: 50%;
-        opacity: 0;
-        transform: scale(1.5);
-        transition: all 0.3s ease-in-out;
-    }
+            // top right bottom left
+            > span {
+                position: absolute;
+                top: 0px;
+                left: 8px;
+                padding: 5px;
+                background: #ff9601;
+                border-radius: 0 5px 5px 0;
+                z-index: 2;
+                font-size: 11px;
+            }
 
-    .block {
-        overflow: hidden;
-        .heading {
-            overflow: hidden;
-            margin: 15px 0 20px;
+            > a {
+                display: block;
+                margin: 0 8px;
+                overflow: hidden;
+                color: white;
+                > img {
+                    width: 100%;
+                    // width: 100%;
+                    height: 100px;
+                    object-fit: cover;
+                }
+                > p {
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 92.5%;
+                    //width: 85%;
+                    max-height: 35px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0;
+                    // top right bottom left
+                    padding: 5px 0px 5px 2px;
+                }
+            }
         }
-        .caption a,
-        .caption {
-            font-size: 25px;
-            float: left;
-            font-family: roboto;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            padding: 16px 0;
-            color: #a5cbef;
-            background: #ff8a00;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-        }
-
-        .top-slide .item a {
-            display: block;
-            margin: 0 8px;
-            overflow: hidden;
-        }
-        .top-slide .item a p {
-            position: absolute;
-            bottom: 3px;
-            left: 8px;
-            right: 8px;
-            padding: 8px;
-            color: #fff;
-            font-size: 15px;
-            font-family: roboto;
-            background: rgba(0, 0, 0, 0.7);
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .top-slide .owl-item {
-            float: left;
-            width: 20%;
+        .overlay {
             position: relative;
         }
-      
-        .owl-theme .owl-controls .owl-buttons div.owl-prev {
-            left: 8px;
-        }
-        .owl-theme .owl-controls .owl-buttons div {
+        .owl-buttons div {
             background: 0 0;
             padding: 0;
             margin: 0;
             position: absolute;
+            z-index: 10;
             top: 50%;
             font-size: 80px;
             opacity: 0.6;
             color: #ff9601;
             margin-top: -57px;
         }
-        .owl-theme .owl-controls .owl-buttons div.owl-next {
+        .owl-buttons div.owl-next {
             right: 8px;
         }
-        .owl-theme .owl-controls .owl-buttons div {
-            background: 0 0;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            font-size: 80px;
-            opacity: 0.6;
-            color: #ff9601;
-            margin-top: -57px;
+        .owl-buttons div.owl-prev {
+            left: 8px;
         }
     }
 }
