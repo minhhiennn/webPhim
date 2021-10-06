@@ -17,6 +17,7 @@ export class DetailComponent implements OnInit {
     autoplay: true,
     nav:true,
     navSpeed: 700,
+    
     navText: [`<i class="fa fa fa-caret-left"></i>`, `<i class="fa fa fa-caret-right"></i>`],
     responsive: {
       0: {

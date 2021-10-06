@@ -27,4 +27,41 @@ input:focus {
 input {
     border: none;
 }
+.owl-carousel{
+    position: relative;
+}
+.owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    background: 0 0;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    font-size: 80px;
+    opacity: .6;
+    color: #ff9601;
+    margin-top: -57px;
+
+}
+.owl-carousel .owl-nav .owl-prev {
+    // fa-chevron-left
+    position: absolute;
+    top:50px;
+    left: 10px;
+}
+.owl-carousel .owl-nav .owl-next {
+    //fa-chevron-right
+    position: absolute;
+    top:50px;
+    right: 10px;
+}
+.owl-carousel .owl-nav .owl-prev:hover{
+    // fa-chevron-left
+    background-color: transparent;
+    
+}
+.owl-carousel .owl-nav .owl-next:hover {
+    //fa-chevron-right
+    background-color: transparent;
+}
 

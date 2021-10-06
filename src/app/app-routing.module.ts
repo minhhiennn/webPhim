@@ -30,6 +30,6 @@ const routes: Routes = [
     CarouselModule,
     CommonModule
   ],
-  exports: [RouterModule, CarouselModule]
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
