@@ -31,7 +31,7 @@
                         bottom: 10px;
                         left: 10px;
                     }
-                    .icon-play {
+                    > .icon-play {
                         background: rgba(255, 150, 1, 0.75);
                         height: 50px;
                         width: 50px;
@@ -45,7 +45,7 @@
                         cursor: pointer;
                         opacity: 0.7;
                     }
-                    .icon-play::after {
+                    > .icon-play::after {
                         content: "";
                         position: absolute;
                         top: 50%;
@@ -53,6 +53,9 @@
                         border: 15px solid transparent;
                         border-left: 20px solid #fff;
                         margin: -15px 0 0 -6px;
+                    }
+                    > .icon-play:hover {
+                        transform: scale(1.8);
                     }
                     .text {
                         position: absolute;
@@ -241,6 +244,35 @@
                                 padding: 5px 0px 5px 2px;
                             }
                         }
+                        > .icon-play {
+                            background: rgba(255, 150, 1, 0.75);
+                            height: 50px;
+                            width: 50px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin: -25px 0 0 -25px;
+                            border-radius: 50%;
+                            transform: scale(1);
+                            transition: all 0.3s ease-in-out;
+                            cursor: pointer;
+                            opacity: 0;
+                        }
+                        > .icon-play::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            border: 15px solid transparent;
+                            border-left: 20px solid #fff;
+                            margin: -15px 0 0 -6px;
+                        }
+                    }
+                    .item:hover{
+                        > .icon-play {
+                            transform: scale(1.05);
+                            opacity: 0.7;
+                        }
                     }
                 }
             }
@@ -255,18 +287,18 @@
     > p {
         margin: 0;
         padding: 0;
-        .btn-dark{
+        .btn-dark {
             border-color: transparent;
             background-color: transparent;
         }
         > a {
-            padding: .250rem .75rem;
+            padding: 0.25rem 0.75rem;
             margin: 0;
             color: #fff;
             line-height: 18px;
             font-size: 12px;
         }
-        > a:hover{
+        > a:hover {
             color: orange;
         }
     }
