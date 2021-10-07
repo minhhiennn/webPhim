@@ -155,10 +155,8 @@
                         <div class="overlay">
                             <div>
                                 <div class="owl-buttons">
-                                    <div class="owl-prev" (click)="owlCar.prev()"><i class="fa fa fa-caret-left"></i>
-                                    </div>
-                                    <div class="owl-next" (click)="owlCar.next()"><i class="fa fa fa-caret-right"></i>
-                                    </div>
+                                    <div class="owl-prev"><i class="fa fa fa-caret-left" (click)="owlCar.prev()"></i></div>
+                                    <div class="owl-next"><i class="fa fa fa-caret-right" (click)="owlCar.next()"></i></div>
                                 </div>
                             </div>
                             <owl-carousel-o [options]="customOptions" #owlCar>
