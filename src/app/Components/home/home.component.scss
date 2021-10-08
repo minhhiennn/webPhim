@@ -1,0 +1,265 @@
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.film-related {
+    margin: 20px 0 0;
+    padding: 10px 0 0;
+    > .heading {
+        .caption {
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding: 16px 0;
+            color: #ff8a00;
+        }
+    }
+    .item {
+        position: relative;
+        // top right bottom left
+        > span {
+            position: absolute;
+            top: 0px;
+            left: 8px;
+            padding: 5px;
+            background: #ff9601;
+            border-radius: 0 3px 3px 0;
+        }
+        > a {
+            display: block;
+            margin: 0 8px;
+            overflow: hidden;
+            color: white;
+            > img {
+                width: 100%;
+                // width: 100%;
+                height: 100px;
+                object-fit: cover;
+            }
+            > p {
+                background-color: rgba(0, 0, 0, 0.7);
+                width: 92.5%;
+                //width: 85%;
+                max-height: 35px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                bottom: 0;
+                margin: 0;
+                // top right bottom left
+                padding: 5px 0px 5px 2px;
+            }
+        }
+        > .icon-play {
+            background: rgba(255, 150, 1, 0.75);
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            border-radius: 50%;
+            transform: scale(1.5);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            opacity: 0;
+        }
+        > .icon-play::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 15px solid transparent;
+            border-left: 20px solid #fff;
+            margin: -15px 0 0 -6px;
+        }
+    }
+    .item:hover {
+        > .icon-play {
+            transform: scale(1.05);
+            opacity: 0.7;
+        }
+    }
+}
+#main-content {
+    #content {
+        .container {
+            //border: 1px solid red;
+            .block {
+                //border: 1px solid red;
+                // top right bottom left
+                margin: 30px 0px 15px 0px;
+                overflow: hidden;
+                .heading {
+                    display: flex;
+                    .caption {
+                        font-size: 25px;
+                        float: left;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        margin-bottom: 15px;
+                        padding: 16px 0;
+                        color: #ff8a00;
+                    }
+                    > .see-more {
+                        position: relative;
+                        margin-left: auto;
+                        margin-top: 18px;
+                        margin-bottom: 30px;
+                        padding: 5px;
+                        background-color: #5d5d5d;
+                        border-radius: 3px;
+                        color: #fff;
+                        font-weight: 700;
+                        font-size: 12px;
+                    }
+                    > .see-more:hover {
+                        color: #ff8a00;
+                    }
+                    > .sub-heading {
+                        display: flex;
+                        margin-top: 16px;
+                        margin-bottom: 32px;
+                        margin-left: 50px;
+                        > li {
+                            background-color: #504d49;
+                            margin-right: 8px;
+                            padding: 3px;
+                            transition: all 0.3s ease-in-out;
+                            > a {
+                                color: #fff;
+                            }
+                        }
+                        > li:hover {
+                            background-color: #ff8a00;
+                        }
+                    }
+                }
+                .list-film {
+                    //   border: 1px solid red;
+                    margin-right: -10px;
+                    position: relative;
+                    overflow: hidden;
+                    .item {
+                        //border: 1px solid red;
+                        float: left;
+                        width: 20%;
+                        position: relative;
+                        font-size: 13px;
+                        // top right bottom left
+                        padding: 5px;
+                        overflow: hidden;
+
+                        > span {
+                            position: absolute;
+                        }
+
+                        > a {
+                            display: block;
+                            overflow: hidden;
+                            > img {
+                                width: 100%;
+                                object-fit: cover;
+                                transition: all 0.3s ease-in-out;
+                            }
+                            > p {
+                                position: absolute;
+                                bottom: -10px;
+                                left: 5px;
+                                right: 5px;
+                                background: rgba(0, 0, 0, 0.6);
+                                color: #fff;
+                                padding: 10px;
+                                line-height: 1.3em;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                            }
+                            > .icon-play {
+                                background: rgba(255, 150, 1, 0.75);
+                                height: 50px;
+                                width: 50px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                margin: -25px 0 0 -25px;
+                                border-radius: 50%;
+                                transform: scale(1.5);
+                                transition: all 0.3s ease-in-out;
+                                cursor: pointer;
+                                opacity: 0;
+                            }
+                            > .icon-play::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                border: 15px solid transparent;
+                                border-left: 20px solid #fff;
+                                margin: -15px 0 0 -6px;
+                            }
+                        }
+
+                        .label {
+                            padding: 5px;
+                            font-size: 11px;
+                            color: #fff;
+                            background: #1b2a39;
+                            border: 1px solid #1b2a3900;
+                            z-index: 2;
+                            font-weight: 400;
+                            background-size: 200% 100%;
+                            background-image: linear-gradient(to right, #c02425 0%, #f0cb35 51%, #c02425 100%);
+                            transition: 0.7s;
+                        }
+                        .label:empty {
+                            display: none;
+                        }
+                    }
+                    .item:hover {
+                        > a {
+                            > img {
+                                transform: scale(1.2);
+                            }
+                            .icon-play {
+                                transform: scale(1.05);
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .large {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+.container-tag-box {
+    margin: 0 auto;
+    width: auto;
+    padding: 0 60px;
+    max-width: 1500px;
+    > p {
+        margin: 0;
+        padding: 0;
+        .btn-dark {
+            border-color: transparent;
+            background-color: transparent;
+        }
+        > a {
+            padding: 0.25rem 0.75rem;
+            margin: 0;
+            color: #fff;
+            line-height: 18px;
+            font-size: 12px;
+        }
+        > a:hover {
+            color: orange;
+        }
+    }
+}
