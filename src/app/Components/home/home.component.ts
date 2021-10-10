@@ -3,6 +3,9 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
+declare function testAPi(data: any): any;
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -79,8 +82,8 @@ export class HomeComponent implements OnInit {
       console.log(channel_key2);
       fetch(`http://localhost:3000/fetch?channelKey2=${channel_key2}`)
         .then(response => response.text())
-        .then(data => {
-           console.log(data);
+        .then((data: any) => {
+          console.log(testAPi(data))
         })
     })
   }
