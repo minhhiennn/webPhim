@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
 
   customOptions: OwlOptions = {
 
@@ -39,10 +42,46 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-
+  fetchApiGetChannelKey2(): Promise<string> {
+    return fetch('https://www.fullfim.net/movies/hai-tet-hoai-linh-chi-tai-truong-giang-tran-thanh--tap-1-0b374655.aspx')
+      .then(response => response.text())
+      .then((data) => {
+        let parser = new DOMParser();
+        let x = parser.parseFromString(data, 'text/html');
+        return fetch(x.getElementsByTagName('script')[2].src)
+          .then(response => response.text())
+          .then((data) => {
+            let x = data.split('channel_key2 =')[1].substring(2, data.split('channel_key2 =')[1].length - 2);
+            return x;
+          })
+      })
   }
 
+
+  ngOnInit(): void {
+    // this.http.get(url, { responseType: 'text' }).subscribe(data => {
+    //   let parser = new DOMParser();
+    //   let x = parser.parseFromString(data, 'text/html');
+    //   console.log(x.getElementsByTagName('script')[2]);
+    //   console.log(x.getElementsByTagName('script')[4].innerText.split('\n'));
+    //   console.log(x.getElementsByTagName('script')[5]);
+    //   console.log(x.getElementsByTagName('script')[6]);
+    // });
+    // this.http.get('https://cdn2.kenhvn2.com/check-user.php', { responseType: 'text' }).subscribe(data => {
+    //   console.log(data);
+    //   let x = data.split('channel_key2')[1];
+    //   console.log(x);
+    // })
+    this.fetchApiGetChannelKey2().then((key) => {
+      let channel_key2 = key;
+      console.log(channel_key2);
+      fetch(`http://localhost:3000/fetch?channelKey2=${channel_key2}`)
+        .then(response => response.text())
+        .then(data => {
+           console.log(data);
+        })
+    })
+  }
 }

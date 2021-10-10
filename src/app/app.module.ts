@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//// swiper
-////
+// routing and component and more
 import { AppRoutingModule } from './app-routing.module';
+// component
 import { AppComponent } from './app.component';
-//component
-
+// http client
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
