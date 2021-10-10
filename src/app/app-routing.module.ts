@@ -11,6 +11,7 @@ import { HeaderComponent } from './Common/header/header.component';
 import { FooterComponent } from './Common/footer/footer.component';
 import { ListComponent } from './Components/list/list.component';
 
+
 const routes: Routes = [
   { path: 'watching', component: WatchingComponent },
   { path: 'detail', component: DetailComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
     HomeComponent,
     WatchingComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ListComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
