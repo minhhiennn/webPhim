@@ -17,7 +17,7 @@ function testAPi(content) {
     var channel_video_1_hd = domain_fix_1 + channel_stream_1 + "=m22";
     var channel_url_fix1 = channel_url_fix.trim();
     var channel_checklink = "";
-    var myname = location.href;
+    var myname = `https://www.fullfim.net/movies/than-bai-macau-1-chau-nhuan-phat-luu-duc-hoa-tap-Full-0b353935.aspx`;
     if (myname.indexOf("sub1") > "0") {
         var num_sv = "333";
     }

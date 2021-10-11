@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+import { HttpClient } from '@angular/common/http';
 
 declare function testAPi(data: any): any;
-
 
 @Component({
   selector: 'app-home',
